@@ -2,12 +2,14 @@ const { app, BrowserWindow, Menu} = require('electron');
 const path = require('path');
 const { execFile, exec } = require('child_process');
 
-
-
+// ---------------------------------
+//     Manage Flask Executable
+// ---------------------------------
+ 
 // Specify the path to your Flask executable
 const flaskExecutablePath = 'NetSpiderServer.exe';
 
-
+// ONLY RUNS when inside of executable mode
 // Use exec to run the Flask executable
 let flaskProcess = execFile(flaskExecutablePath, (error, stdout, stderr) => {
   if (error) {
@@ -33,6 +35,10 @@ flaskProcess.on('exit', (code, signal) => {
 if (require('electron-squirrel-startup')) {
     app.quit();
 }
+
+// ---------------------------------
+//     Manage Electron Desktop Window
+// ---------------------------------
 
 const createWindow = () => {
     // Create the browser window.
@@ -83,6 +89,9 @@ const createWindow = () => {
     Menu.setApplicationMenu(menu);
 };
 
+// ---------------------------------
+//  Electron Desktop Before Init and Before Close
+// ---------------------------------
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -90,7 +99,7 @@ app.on('ready', () => {
     // Add a delay before creating the window
     setTimeout(() => {
         createWindow();
-    }, 15000); // 15000 milliseconds = 15 seconds
+    }, 1000); // 15000 milliseconds = 15 seconds
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
