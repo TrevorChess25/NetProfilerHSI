@@ -111,10 +111,12 @@ app.on('window-all-closed', () => {
     }
 });
 
-//kill all NetSpiderServer processes
+
+/* //kill all NetSpiderServer processes
 app.on('before-quit', async () => {
   process.kill(flaskPID, 'SIGKILL');
   exec('taskkill /IM NetSpiderServer.exe /F');
   exec('taskkill /IM NetSpiderServer.exe /F');
   exec('taskkill /IM undetected_chromedriver.exe /F');
 });
+ */
