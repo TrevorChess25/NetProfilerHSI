@@ -170,9 +170,13 @@ Please read our [Contributing Guidelines](link-to-contributing-guidelines) for m
 * **Corey Record** - Backend Developer
 * **Dylan Garcia** - Frontend Developer
 
-## Netspider 24-25 Team
+## NetProfiler 24-25 Team
 
-* **Caleb Newman** - Full Stack Developer
+* **Jonathan Howard** - Full Stack Developer
+* **Trevor Chessnoe** - Backend Developer
+* **Sahbah Gonzalez** - Full Stack Developer
+* **Miguel Llanes** - Full Stack Developer
+* **Olivia Schafer** - Front End Developer
 
 ## Sponsors and Mentors
 
